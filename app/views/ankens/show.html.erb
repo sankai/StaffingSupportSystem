@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<b>**** Information of Project ****</b>
+
+<p>
+  <b>Name:</b>
+  <%= @anken.name %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @anken.customer %>
+</p>
+
+<p>
+  <b>Estimateprice:</b>
+  <%= @anken.estimatePrice %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @anken.memo %>
+</p>
+
+<p>
+  <b>ankenstatus:</b>
+  <%= @anken.ankenstatus.name %>
+</p>
+
+<p>
+  <b>dept:</b>
+  <%= @anken.dept.name %>
+</p>
+
+<br />
+<b>**** Information of Staffing ****</b>
+<br />
+<br />
+
+<table class="table">
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Rolecomment</th>
+    <th>Num_engineer</th>
+    <th>Num_assigned</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @anken.assignments.each do |assignment| %>
+  <tr>
+    <td><%= assignment.from %></td>
+    <td><%= assignment.to %></td>
+    <td><%= assignment.roleComment %></td>
+    <td><%= assignment.num_engineer %></td>
+    <td><%= assignment.members.size %></td>    
+    <td><%= assignment.status %></td>
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+    <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+    <td>
+    <%= link_to 'Append Assignment', new_assignment_with(@anken) %>
+    </td></tr>
+</table>
+<br>
+<br>
+<%= link_to 'Edit', edit_anken_path(@anken) %> |
+<%= link_to 'Back', ankens_path %>

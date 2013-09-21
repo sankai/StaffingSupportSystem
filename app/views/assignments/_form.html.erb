@@ -1,0 +1,38 @@
+<%= form_for(@assignment) do |f| %>
+  <% if @assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% @assignment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.date_select :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br />
+    <%= f.date_select :to %>
+  </div>
+  <div class="field">
+    <%= f.label :roleComment %><br />
+    <%= f.text_field :roleComment %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.select :status, [["スタッフィング候補", "スタッフィング候補"], ["確定", "確定"]], :prompt => "選択してください。"  %>
+    <!--= f.text_field :status %-->
+  </div>
+  <div class="field">
+    <%= f.label :num_engineer %><br />
+    <%= f.number_field :num_engineer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

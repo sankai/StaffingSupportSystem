@@ -1,0 +1,35 @@
+<h1>Listing members</h1>
+
+<table class="table">
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.code %></td>
+    <td><%= member.name %></td>
+    <td><%= member.email %></td>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+  <tr>
+  <td colspan="3"></td>
+  <td colspan="2"><%= link_to 'New Member', new_member_path %></td>
+  <td colspan="1"><%= link_to 'CSV Download', members_path(format:"csv") %></td>
+  </tr> 
+</table>
+<br />
+<%= form_tag 'members/upload', :multipart => true do %>
+  メンバー一括登録:（*.csv）
+  <%= file_field_tag 'upload_file' %>
+  <%= submit_tag "アップロード", :confirm => "アップロードしていいですか？" %>
+<% end %>
+<br />

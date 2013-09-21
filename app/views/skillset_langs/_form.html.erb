@@ -1,0 +1,25 @@
+<%= form_for(@skillset_lang) do |f| %>
+  <% if @skillset_lang.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@skillset_lang.errors.count, "error") %> prohibited this skillset_lang from being saved:</h2>
+
+      <ul>
+      <% @skillset_lang.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br />
+    <%= f.text_field :memo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

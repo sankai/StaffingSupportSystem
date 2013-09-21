@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    attributes:
+      anken:
+        name: 案件名
+        customer: 顧客
+        estimatePrice: 見積もり金額
+        memo: メモ
+        ankenstatus: ステータス
+        dept: 部門
+      ankenstatus:
+        name: スタータス
+      assignment:
+        from: 開始日
+        to: 終了日
+        roleComment: 役割について
+        status: ステータス
+      dept:
+        code: 部門コード
+        name: 部門名
+        

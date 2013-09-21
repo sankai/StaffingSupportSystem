@@ -1,0 +1,43 @@
+<%= form_for(@anken) do |f| %>
+  <% if @anken.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anken.errors.count, "error") %> prohibited this anken from being saved:</h2>
+
+      <ul>
+      <% @anken.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :customer %><br />
+    <%= f.text_field :customer %>
+  </div>
+  <div class="field">
+    <%= f.label :estimatePrice %><br />
+    <%= f.number_field :estimatePrice %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br />
+    <%= f.text_field :memo %>
+  </div>
+  <div class="field">
+    <%= f.label :ankenstatus %><br>
+    <%= f.collection_select( :ankenstatus_id, @ankenstatuses, :id, :name, :include_blank => false ) %>
+  </div>
+  <div class="field">
+    <%= f.label :dept %><br>
+    <%= f.collection_select( :dept_id, @depts, :id, :name, :include_blank => false ) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

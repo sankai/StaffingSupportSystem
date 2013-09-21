@@ -1,0 +1,29 @@
+<h1 class="title">Listing ankens</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Customer</th>
+    <th>Estimateprice</th>
+    <th>Memo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ankens.each do |anken| %>
+  <tr>
+    <td><%= anken.name %></td>
+    <td><%= anken.customer %></td>
+    <td><%= anken.estimatePrice %></td>
+    <td><%= anken.memo %></td>
+    <td><%= link_to 'Show', anken %></td>
+    <td><%= link_to 'Edit', edit_anken_path(anken) %></td>
+    <td><%= link_to 'Destroy', anken, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Anken', new_anken_path %>

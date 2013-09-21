@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  from: 2013-09-18
+  to: 2013-09-18
+  roleComment: MyString
+  status: MyString
+
+two:
+  from: 2013-09-18
+  to: 2013-09-18
+  roleComment: MyString
+  status: MyString

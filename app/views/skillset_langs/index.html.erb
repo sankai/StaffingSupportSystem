@@ -1,0 +1,25 @@
+<h1>Listing skillset_langs</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Memo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @skillset_langs.each do |skillset_lang| %>
+  <tr>
+    <td><%= skillset_lang.name %></td>
+    <td><%= skillset_lang.memo %></td>
+    <td><%= link_to 'Show', skillset_lang %></td>
+    <td><%= link_to 'Edit', edit_skillset_lang_path(skillset_lang) %></td>
+    <td><%= link_to 'Destroy', skillset_lang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Skillset lang', new_skillset_lang_path %>

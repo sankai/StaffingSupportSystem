@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  customer: MyString
+  estimatePrice: 1
+  memo: MyString
+
+two:
+  name: MyString
+  customer: MyString
+  estimatePrice: 1
+  memo: MyString

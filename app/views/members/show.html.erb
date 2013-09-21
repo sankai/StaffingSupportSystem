@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @member.code %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @member.email %>
+</p>
+
+<p>
+  <b>Assignment Information</b>
+	<table>
+	  <tr>
+	    <th>From</th>
+	    <th>To</th>
+	    <th>Rolecomment</th>
+	    <th>Status</th>
+	    <th>num_engineer</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	  <% @member.assignments.each do |assignment| %>
+	  <tr>
+	    <td><%= assignment.from %></td>
+	    <td><%= assignment.to %></td>
+	    <td><%= assignment.roleComment %></td>
+	    <td><%= assignment.status %></td>
+	    <td><%= assignment.num_engineer %></td>
+	    <td><%= link_to 'Show', assignment %></td>
+	    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+	    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	  <% end %>
+	</table>
+</p>
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

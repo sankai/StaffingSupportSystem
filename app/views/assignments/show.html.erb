@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= @assignment.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @assignment.to %>
+</p>
+
+<p>
+  <b>Rolecomment:</b>
+  <%= @assignment.roleComment %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @assignment.status %>
+</p>
+
+<p>
+  <b>Num_engineer:</b>
+  <%= @assignment.num_engineer %>
+</p>
+
+<p>
+  <br />
+  <b>**** Assigned Members ****</b>
+	<table class="table">
+	  <tr>
+	    <th>Code</th>
+	    <th>Name</th>
+	    <th>Email</th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	<% @assignment.members.each do |member| %>
+	  <tr>
+	    <td><%= member.code %></td>
+	    <td><%= member.name %></td>
+	    <td><%= member.email %></td>
+	    <td><%= link_to 'Show', member %></td>
+	    <td><%= link_to 'release', member %></td>
+	  </tr>
+	<% end %>
+    <tr> <td></td> <td></td> <td></td>
+    <td>
+    <%= link_to 'Assign member', new_member_for(@assignment) %>
+    </td></tr>
+	</table>
+</p>
+<br>
+<br>
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<!--= link_to 'Back', assignments_path %-->
+<%= link_to 'Back', @assignment.anken %>
+
