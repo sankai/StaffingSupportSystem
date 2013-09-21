@@ -2,7 +2,7 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    @members = Member.paginate(:page => params[:page], :order => 'code', :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -92,7 +92,7 @@ class MembersController < ApplicationController
 	      m.save()
 	    end
 	  end
-	  redirect_to action => :index
+	  redirect_to :action => :index
   end
   
 end

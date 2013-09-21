@@ -1,11 +1,11 @@
-<h1 class="title">Listing ankens</h1>
+<h1 class="title">案件一覧</h1>
 
 <table class="table">
   <tr>
-    <th>Name</th>
-    <th>Customer</th>
-    <th>Estimateprice</th>
-    <th>Memo</th>
+    <th>案件名</th>
+    <th>お客様</th>
+    <th>想定受注金額</th>
+    <th>メモ</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,8 +22,16 @@
     <td><%= link_to 'Destroy', anken, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+  <tr>
+  <td colspan="4"></td><td colspan="2"><%= link_to 'New Anken', new_anken_path %></td><td><%= link_to 'CSV Download', ankens_path(format:"csv") %></td>
+  </tr>
 </table>
+<%= will_paginate @ankens, :previous_label=>'≪前', :next_label=>'次≫' %>
 
 <br />
-
-<%= link_to 'New Anken', new_anken_path %>
+<br />
+<%= form_tag 'ankens/upload', :multipart => true do %>
+  案件一括登録:（*.csv）
+  <%= file_field_tag 'upload_file', :accept => 'text/comma-separated-values' %>
+  <%= submit_tag "アップロード", :confirm => "アップロードしていいですか？" %>
+<% end %>

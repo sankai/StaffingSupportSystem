@@ -10,7 +10,11 @@ StaffingSystem::Application.routes.draw do
 
   match 'assignments/assigningmember/:id'    => 'assignments#assigningmember'
 
+  match 'ankens/upload' => 'ankens#upload'
+
   match 'members/upload' => 'members#upload'
+
+  match 'depts/upload' => 'depts#upload'
 
   resources :skillset_roles
 

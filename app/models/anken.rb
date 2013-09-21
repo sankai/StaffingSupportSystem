@@ -28,8 +28,8 @@ class Anken < ActiveRecord::Base
     newAnken.name            = anArray[2].to_s.encode('utf-8', 'sjis')
     newAnken.customer        = anArray[3].to_s.encode('utf-8', 'sjis')
     newAnken.estimatePrice   = anArray[4].to_i
-    newAnken.ankanstatus_id  = 1
-    newAnken.nemo            = anArray[6].to_s.encode('utf-8', 'sjis')
+    newAnken.ankenstatus_id  = 1
+    newAnken.memo            = anArray[6].to_s.encode('utf-8', 'sjis')
     return newAnken    
   end
   

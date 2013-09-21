@@ -2,8 +2,8 @@
 
 <table class="table">
   <tr>
-    <th>Code</th>
-    <th>Name</th>
+    <th>部門コード</th>
+    <th>部門名</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,8 +18,17 @@
     <td><%= link_to 'Destroy', dept, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+  <tr>
+    <td></td> <td></td> <td colspan="2"><%= link_to 'New Dept', new_dept_path %></td> <td><%= link_to 'CSV Download', depts_path(format:"csv") %></td>
+  </tr>
 </table>
+<%= will_paginate @members, :previous_label=>'≪前', :next_label=>'次≫' %>
 
 <br />
+<br />
+<%= form_tag 'depts/upload', :multipart => true do %>
+  部門一括登録:（*.csv）
+  <%= file_field_tag 'upload_file', :accept => 'text/comma-separated-values' %>
+  <%= submit_tag "アップロード", :confirm => "アップロードしていいですか？" %>
+<% end %>
 
-<%= link_to 'New Dept', new_dept_path %>

@@ -2,10 +2,11 @@ class DeptsController < ApplicationController
   # GET /depts
   # GET /depts.json
   def index
-    @depts = Dept.all
+    @depts = Dept.paginate(:page => params[:page], :order => 'code', :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv { send_data Dept.to_csv }
       format.json { render json: @depts }
     end
   end
@@ -80,4 +81,18 @@ class DeptsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # CSV Upload /upload
+  def upload
+    require 'csv'
+	  if !params[:upload_file].blank?
+	    reader = params[:upload_file].read
+	    CSV.parse(reader) do |row|
+	      d = Dept.from_csv(row)
+	      d.save()
+	    end
+	  end
+	  redirect_to :action => :index
+  end
+  
 end

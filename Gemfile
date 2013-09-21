@@ -5,7 +5,16 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'heroku'
+
+group :production, :staging do
+  #gem "pg"       # heroku 
+  gem "mysql2", '= 0.3.11'    # 1go1nen
+end
+
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
+end
 
 
 # Gems used only for assets and not required
@@ -42,4 +51,7 @@ gem 'devise'
 
 # for nice design
 gem 'web-app-theme', :git => 'http://github.com/pilu/web-app-theme.git'
+
+# will pagenate
+gem 'will_paginate'
 

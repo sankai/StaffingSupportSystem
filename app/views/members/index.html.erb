@@ -2,9 +2,9 @@
 
 <table class="table">
   <tr>
-    <th>Code</th>
-    <th>Name</th>
-    <th>Email</th>
+    <th>社員コード</th>
+    <th>姓名</th>
+    <th>Ｅメール</th>
     <th></th>
     <th></th>
     <th></th>
@@ -26,10 +26,12 @@
   <td colspan="1"><%= link_to 'CSV Download', members_path(format:"csv") %></td>
   </tr> 
 </table>
+<%= will_paginate @members, :previous_label=>'≪前', :next_label=>'次≫' %>
+<br />
 <br />
 <%= form_tag 'members/upload', :multipart => true do %>
   メンバー一括登録:（*.csv）
-  <%= file_field_tag 'upload_file' %>
+  <%= file_field_tag 'upload_file', :accept => 'text/comma-separated-values' %>
   <%= submit_tag "アップロード", :confirm => "アップロードしていいですか？" %>
 <% end %>
 <br />

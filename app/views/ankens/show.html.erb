@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<b>**** Information of Project ****</b>
+<h2>案　件　情　報</h2>
 
 <p>
   <b>Name:</b>
@@ -33,18 +33,15 @@
 </p>
 
 <br />
-<b>**** Information of Staffing ****</b>
-<br />
-<br />
-
+<h3>ご要望事項</h3>
 <table class="table">
   <tr>
     <th>From</th>
     <th>To</th>
-    <th>Rolecomment</th>
-    <th>Num_engineer</th>
-    <th>Num_assigned</th>
-    <th>Status</th>
+    <th>役割</th>
+    <th>ご要望要員数</th>
+    <th>アサイン済要員数</th>
+    <th>ステータス</th>
     <th></th>
     <th></th>
     <th></th>
@@ -65,7 +62,7 @@
 <% end %>
     <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
     <td>
-    <%= link_to 'Append Assignment', new_assignment_with(@anken) %>
+    <%= link_to 'ご要望事項の追加', new_assignment_with(@anken) %>
     </td></tr>
 </table>
 <br>

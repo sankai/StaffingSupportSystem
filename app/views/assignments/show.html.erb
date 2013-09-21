@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h2>ご要望の詳細</h2>
+
+<p>
+  <b>Name:</b>
+  <%= @assignment.anken.name %>
+</p>
+
 <p>
   <b>From:</b>
   <%= @assignment.from %>
@@ -27,12 +34,12 @@
 
 <p>
   <br />
-  <b>**** Assigned Members ****</b>
+  <b>アサイン済メンバ</b>
 	<table class="table">
 	  <tr>
-	    <th>Code</th>
-	    <th>Name</th>
-	    <th>Email</th>
+	    <th>社員コード/th>
+	    <th>姓名</th>
+	    <th>Ｅメール</th>
 	    <th></th>
 	    <th></th>
 	  </tr>
@@ -48,7 +55,7 @@
 	<% end %>
     <tr> <td></td> <td></td> <td></td>
     <td>
-    <%= link_to 'Assign member', new_member_for(@assignment) %>
+    <%= link_to 'メンバアサイン', new_member_for(@assignment) %>
     </td></tr>
 	</table>
 </p>

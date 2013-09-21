@@ -2,7 +2,7 @@ class AnkensController < ApplicationController
   # GET /ankens
   # GET /ankens.json
   def index
-    @ankens = Anken.all
+    @ankens = Anken.paginate(:page => params[:page], :order => 'id', :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -85,4 +85,18 @@ class AnkensController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # CSV Upload /upload
+  def upload
+    require 'csv'
+	  if !params[:upload_file].blank?
+	    reader = params[:upload_file].read
+	    CSV.parse(reader) do |row|
+	      d = Anken.from_csv(row)
+	      d.save()
+	    end
+	  end
+	  redirect_to :action => :index
+  end
+
 end
