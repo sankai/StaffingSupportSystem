@@ -45,13 +45,13 @@ StaffingSystem::Application.configure do
   #  :domain => 'localhost',
   #  :authentication => :login,
   #  :user_name => 'sankaikaz@gmail.com',
-  #  :password  => '3kai1taka'
+  #  :password  => 'pppppppp'
   #}
   config.action_mailer.smtp_settings = {
     :address => 'smtp.ogis-ri.co.jp',
     :port => 25,
     :authentication => :login,
     :user_name => 'P9572843',
-    :password => 'unclejosh',
+    :password => 'pppppppp',
   }
 end

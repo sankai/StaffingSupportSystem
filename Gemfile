@@ -50,7 +50,7 @@ gem 'jquery-rails'
 gem 'devise'
 
 # for nice design
-# gem 'web-app-theme', :git => 'http://github.com/pilu/web-app-theme.git'
+gem 'web-app-theme', :git => 'http://github.com/pilu/web-app-theme.git'
 
 # will pagenate
 gem 'will_paginate'

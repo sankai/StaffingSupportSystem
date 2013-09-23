@@ -61,6 +61,7 @@ module StaffingSystem
   
     # for devise
     config.assets.initialize_on_precompile = false
+    Rails.application.config.assets.compile = true
     
   end
 end
