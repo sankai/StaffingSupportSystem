@@ -12,9 +12,9 @@ group :production, :staging do
   gem "mysql2", '= 0.3.11'    # 1go1nen
 end
 
-group :development, :test do
-  #gem "sqlite3-ruby", :require => "sqlite3"
-end
+#group :development, :test do
+#  gem "sqlite3-ruby", :require => "sqlite3"
+#end
 
 
 # Gems used only for assets and not required
