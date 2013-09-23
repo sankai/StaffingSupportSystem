@@ -7,14 +7,14 @@ gem 'rails', '3.2.13'
 
 #gem 'heroku'
 
-#group :production, :staging do
+group :production, :staging do
   #gem "pg"       # heroku 
   gem "mysql2", '= 0.3.11'    # 1go1nen
-#end
+end
 
-#group :development, :test do
-#  gem "sqlite3-ruby", :require => "sqlite3"
-#end
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
+end
 
 
 # Gems used only for assets and not required
