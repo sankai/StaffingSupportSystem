@@ -10,6 +10,8 @@ StaffingSystem::Application.routes.draw do
 
   match 'assignments/assigningmember/:id'    => 'assignments#assigningmember'
 
+  match 'assignments/release/:id/:member_id'    => 'assignments#release'
+
   match 'ankens/upload' => 'ankens#upload'
 
   match 'members/upload' => 'members#upload'

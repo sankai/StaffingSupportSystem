@@ -50,7 +50,7 @@
 	    <td><%= member.name %></td>
 	    <td><%= member.email %></td>
 	    <td><%= link_to 'Show', member %></td>
-	    <td><%= link_to 'release', member %></td>
+	    <td><%= link_to 'release', '/assignments/release/' + @assignment.id.to_s + '/' + member.id.to_s, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>
 	<% end %>
     <tr> <td></td> <td></td> <td></td>

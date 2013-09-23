@@ -93,6 +93,7 @@ class AssignmentsController < ApplicationController
   
   end
 	
+	# assign member to an assignment
 	def assigningmember
 		@assignment = Assignment.find(params[:id])
 		
@@ -104,4 +105,14 @@ class AssignmentsController < ApplicationController
 		end
     redirect_to :action => 'show'
 	end
+	
+	# release member from an assignment
+	def release
+	  anAssignment = Assignment.find(params[:id])
+    aMember      = Member.find(params[:member_id])
+	  anAssignment.members.delete(aMember)
+	  
+    redirect_to :action => 'show'
+	end
+	
 end
