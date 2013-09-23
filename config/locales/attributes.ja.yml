@@ -3,11 +3,11 @@ ja:
     attributes:
       anken:
         name: 案件名
-        customer: 顧客
-        estimatePrice: 見積もり金額
+        customer: お客様
+        estimatePrice: 想定受注金額
         memo: メモ
         ankenstatus: ステータス
-        dept: 部門
+        dept: 主管部署
       ankenstatus:
         name: スタータス
       assignment:
@@ -15,7 +15,20 @@ ja:
         to: 終了日
         roleComment: 役割について
         status: ステータス
+        num_engineer: ご要望要員数
       dept:
         code: 部門コード
         name: 部門名
+      member:
+        code: 社員コード
+        name: 姓名
+        email: Ｅメール
+      skillset_lang:
+        name: スキル名
+        memo: メモ
+      skillset_rolo:
+        name: スキル名
+        memo: メモ
+      
+       
         

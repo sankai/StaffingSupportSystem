@@ -1,4 +1,4 @@
-<h1>Listing assignments</h1>
+<h1>ご要望情報の一覧</h1>
 
 <table>
   <tr>
@@ -19,13 +19,13 @@
     <td><%= assignment.roleComment %></td>
     <td><%= assignment.status %></td>
     <td><%= assignment.num_engineer %></td>
-    <td><%= link_to 'Show', assignment %></td>
-    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', assignment %></td>
+    <td><%= link_to '編集', edit_assignment_path(assignment) %></td>
+    <td><%= link_to '削除', assignment, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Assignment', new_assignment_path %>
+<%= link_to '新たなアサイン', new_assignment_path %>

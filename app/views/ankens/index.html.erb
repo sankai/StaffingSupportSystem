@@ -17,13 +17,13 @@
     <td><%= anken.customer %></td>
     <td><%= anken.estimatePrice %></td>
     <td><%= anken.memo %></td>
-    <td><%= link_to 'Show', anken %></td>
-    <td><%= link_to 'Edit', edit_anken_path(anken) %></td>
-    <td><%= link_to 'Destroy', anken, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', anken %></td>
+    <td><%= link_to '編集', edit_anken_path(anken) %></td>
+    <td><%= link_to '削除', anken, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
   <tr>
-  <td colspan="4"></td><td colspan="2"><%= link_to 'New Anken', new_anken_path %></td><td><%= link_to 'CSV Download', ankens_path(format:"csv") %></td>
+  <td colspan="4"></td><td colspan="2"><%= link_to '案件追加', new_anken_path %></td><td><%= link_to 'CSVダウンロード', ankens_path(format:"csv") %></td>
   </tr>
 </table>
 <%= will_paginate @ankens, :previous_label=>'≪前', :next_label=>'次≫' %>

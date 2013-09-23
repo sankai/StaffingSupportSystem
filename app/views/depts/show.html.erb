@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Code:</b>
+  <b>部門コード:</b>
   <%= @dept.code %>
 </p>
 
 <p>
-  <b>Name:</b>
+  <b>部門名:</b>
   <%= @dept.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_dept_path(@dept) %> |
-<%= link_to 'Back', depts_path %>
+<%= link_to '部門の編集', edit_dept_path(@dept) %> |
+<%= link_to '部門一覧', depts_path %>

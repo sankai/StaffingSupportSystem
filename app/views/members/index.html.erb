@@ -1,4 +1,4 @@
-<h1>Listing members</h1>
+<h1>メンバ一覧</h1>
 
 <table class="table">
   <tr>
@@ -15,15 +15,15 @@
     <td><%= member.code %></td>
     <td><%= member.name %></td>
     <td><%= member.email %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', member %></td>
+    <td><%= link_to '編集', edit_member_path(member) %></td>
+    <td><%= link_to '削除', member, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
   <tr>
   <td colspan="3"></td>
-  <td colspan="2"><%= link_to 'New Member', new_member_path %></td>
-  <td colspan="1"><%= link_to 'CSV Download', members_path(format:"csv") %></td>
+  <td colspan="2"><%= link_to '新規メンバー', new_member_path %></td>
+  <td colspan="1"><%= link_to 'CSVダウンロード', members_path(format:"csv") %></td>
   </tr> 
 </table>
 <%= will_paginate @members, :previous_label=>'≪前', :next_label=>'次≫' %>

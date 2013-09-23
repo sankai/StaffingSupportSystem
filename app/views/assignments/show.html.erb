@@ -3,33 +3,37 @@
 <h2>ご要望の詳細</h2>
 
 <p>
-  <b>Name:</b>
+  <b>案件名:</b>
   <%= @assignment.anken.name %>
 </p>
 
 <p>
-  <b>From:</b>
+  <b>開始日:</b>
   <%= @assignment.from %>
 </p>
 
 <p>
-  <b>To:</b>
+  <b>終了日:</b>
   <%= @assignment.to %>
 </p>
 
 <p>
-  <b>Rolecomment:</b>
+  <b>役割について:</b>
   <%= @assignment.roleComment %>
 </p>
 
 <p>
-  <b>Status:</b>
+  <b>ステータス:</b>
   <%= @assignment.status %>
 </p>
 
 <p>
-  <b>Num_engineer:</b>
+  <b>ご要望要員数:</b>
   <%= @assignment.num_engineer %>
+</p>
+
+<p>
+<%= link_to 'ご要望情報の編集', edit_assignment_path(@assignment) %>
 </p>
 
 <p>
@@ -37,7 +41,7 @@
   <b>アサイン済メンバ</b>
 	<table class="table">
 	  <tr>
-	    <th>社員コード/th>
+	    <th>社員コード</th>
 	    <th>姓名</th>
 	    <th>Ｅメール</th>
 	    <th></th>
@@ -49,19 +53,17 @@
 	    <td><%= member.code %></td>
 	    <td><%= member.name %></td>
 	    <td><%= member.email %></td>
-	    <td><%= link_to 'Show', member %></td>
-	    <td><%= link_to 'release', '/assignments/release/' + @assignment.id.to_s + '/' + member.id.to_s, data: { confirm: 'Are you sure?' } %></td>
+	    <td><%= link_to 'メンバ情報', member %></td>
+	    <td><%= link_to 'リリース', '/assignments/release/' + @assignment.id.to_s + '/' + member.id.to_s, data: { confirm: 'リリースしてよろしいですか？' } %></td>
 	  </tr>
 	<% end %>
     <tr> <td></td> <td></td> <td></td>
     <td>
-    <%= link_to 'メンバアサイン', new_member_for(@assignment) %>
+    <%= link_to 'アサイン', new_member_for(@assignment) %>
     </td></tr>
 	</table>
 </p>
 <br>
-<br>
-<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
 <!--= link_to 'Back', assignments_path %-->
-<%= link_to 'Back', @assignment.anken %>
+<%= link_to '案件に戻る', @assignment.anken %>
 

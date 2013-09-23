@@ -11,9 +11,9 @@
 <% @ankenstatuses.each do |ankenstatus| %>
   <tr>
     <td><%= ankenstatus.name %></td>
-    <td><%= link_to 'Show', ankenstatus %></td>
-    <td><%= link_to 'Edit', edit_ankenstatus_path(ankenstatus) %></td>
-    <td><%= link_to 'Destroy', ankenstatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', ankenstatus %></td>
+    <td><%= link_to '編集', edit_ankenstatus_path(ankenstatus) %></td>
+    <td><%= link_to '削除', ankenstatus, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
 </table>

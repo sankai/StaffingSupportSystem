@@ -1,35 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h2>案　件　情　報</h2>
+<h2>案件情報</h2>
 
 <p>
-  <b>Name:</b>
+  <b>案件名:</b>
   <%= @anken.name %>
 </p>
 
 <p>
-  <b>Customer:</b>
+  <b>お客様:</b>
   <%= @anken.customer %>
 </p>
 
 <p>
-  <b>Estimateprice:</b>
+  <b>想定受注金額:</b>
   <%= @anken.estimatePrice %>
 </p>
 
 <p>
-  <b>Memo:</b>
+  <b>メモ:</b>
   <%= @anken.memo %>
 </p>
 
 <p>
-  <b>ankenstatus:</b>
+  <b>ステータス:</b>
   <%= @anken.ankenstatus.name %>
 </p>
 
 <p>
-  <b>dept:</b>
+  <b>主管部署:</b>
   <%= @anken.dept.name %>
+</p>
+<p>
+<%= link_to '案件情報の編集', edit_anken_path(@anken) %>
 </p>
 
 <br />
@@ -55,9 +58,9 @@
     <td><%= assignment.num_engineer %></td>
     <td><%= assignment.members.size %></td>    
     <td><%= assignment.status %></td>
-    <td><%= link_to 'Show', assignment %></td>
-    <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', assignment %></td>
+    <td><%= link_to '編集', edit_assignment_path(assignment) %></td>
+    <td><%= link_to '削除', assignment, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
     <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
@@ -66,6 +69,4 @@
     </td></tr>
 </table>
 <br>
-<br>
-<%= link_to 'Edit', edit_anken_path(@anken) %> |
-<%= link_to 'Back', ankens_path %>
+<%= link_to '案件一覧', ankens_path %>

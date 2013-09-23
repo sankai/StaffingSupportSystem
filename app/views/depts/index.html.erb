@@ -1,4 +1,4 @@
-<h1>Listing depts</h1>
+<h1部門一覧</h1>
 
 <table class="table">
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= dept.code %></td>
     <td><%= dept.name %></td>
-    <td><%= link_to 'Show', dept %></td>
-    <td><%= link_to 'Edit', edit_dept_path(dept) %></td>
-    <td><%= link_to 'Destroy', dept, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '表示', dept %></td>
+    <td><%= link_to '編集', edit_dept_path(dept) %></td>
+    <td><%= link_to '削除', dept, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
 <% end %>
   <tr>
-    <td></td> <td></td> <td colspan="2"><%= link_to 'New Dept', new_dept_path %></td> <td><%= link_to 'CSV Download', depts_path(format:"csv") %></td>
+    <td></td> <td></td> <td colspan="2"><%= link_to '部門追加', new_dept_path %></td> <td><%= link_to 'CSVダウンロード', depts_path(format:"csv") %></td>
   </tr>
 </table>
 <%= will_paginate @members, :previous_label=>'≪前', :next_label=>'次≫' %>
