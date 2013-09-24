@@ -13,7 +13,7 @@
       <div id="user-navigation">
         <ul class="wat-cf">
           <li><a href="#"> <%= 'now ' + current_user.code + ' logged in' unless current_user.nil? %></a></li>
-          <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
+          <li><a href="/users/edit"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
           <li><a href="#"><%= t("web-app-theme.settings", :default => "Settings") %></a></li>
           <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
         </ul>

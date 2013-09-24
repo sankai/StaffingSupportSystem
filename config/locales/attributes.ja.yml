@@ -29,6 +29,12 @@ ja:
       skillset_rolo:
         name: スキル名
         memo: メモ
-      
-       
+      user:
+        code: 社員コード
+        password: パスワード
+        email: Ｅメール
+        remember_me: ログイン状態を維持する。
+        dept: 所属部門
+        password_confirmation: パスワード（確認）
+        current_password: 現在のパスワード
         
