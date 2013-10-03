@@ -1,9 +1,58 @@
 class AnkensController < ApplicationController
+
   # GET /ankens
   # GET /ankens.json
   def index
-    @ankens = Anken.paginate(:page => params[:page], :order => 'id', :per_page => 10)
 
+    # 1.初期表示（メニューなどからの遷移時）
+    #    ログインユーザの部門コードのみを条件に抽出
+    #    ①検索条件のクリア
+    #    ②ログインユーザの部門コードという条件のみセッションへの保存
+    # 2.検索ボタン押下時
+    #    画面入力された条件に対して抽出
+    #    ①検索条件のクリア
+    #    ②画面入力された条件のセッションへの保存
+    # 3.ページ繰り時
+    #    直前の検索条件をもとにページ繰り
+    #    ①検索条件のセッションからの取り出し
+
+    if params[:page].nil?
+      # ページ繰り以外
+      @searched = Hash.new()
+      session[:searched] = @searched
+      if params[:commit].nil?
+        # 初期表示時：ログインユーザの部門コードという条件のみセッションへの保存
+        @searched.store('dept_id', current_user.dept_id)
+      else
+        # 検索ボタン押下時：画面入力された条件のセッションへの保存
+        params[:search].each do | key, value |
+          @searched.store(key, value)
+        end
+      end
+    else
+      # ページ繰り時：検索条件のセッションからの取り出し
+      @searched = session[:searched]
+    end
+    # まずはページングを指示
+    @ankens = Anken.paginate(:page => params[:page], :order => 'id', :per_page => 10)
+    
+    # 検索条件が指定されていれば、抽出条件としてwhere句を追加
+    # 部門コード
+    if !(@searched.fetch('dept_id', nil).blank?)
+      @ankens = @ankens.where('ankens.dept_id = ?', @searched.fetch('dept_id'))
+    end
+    # 案件名
+    if !(@searched.fetch('ankenname', nil).blank?)
+      @ankens = @ankens.where('ankens.name like ?', "%" + @searched.fetch('ankenname') + "%")
+    end
+    # お客様名
+    if !(@searched.fetch('customer', nil).blank?)
+      @ankens = @ankens.where('ankens.customer like ?', "%" + @searched.fetch('customer') + "%")
+    end
+    
+    # ドロップリスト用
+    @depts  = Dept.all()
+	    
     respond_to do |format|
       format.html # index.html.erb
       format.csv  { send_data Anken.to_csv }

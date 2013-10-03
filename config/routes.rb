@@ -14,6 +14,8 @@ StaffingSystem::Application.routes.draw do
 
   match 'ankens/upload' => 'ankens#upload'
 
+  match 'ankens/index' => 'ankens#index'
+
   match 'members/upload' => 'members#upload'
 
   match 'depts/upload' => 'depts#upload'
