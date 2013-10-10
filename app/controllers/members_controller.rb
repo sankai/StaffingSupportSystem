@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     @members = Member.paginate(:page => params[:page], :order => 'code', :per_page => 10)
-
+    @skillsets = Skillset.all.sort_by{ |model| model.id }  
     respond_to do |format|
       format.html # index.html.erb
       format.csv { send_data Member.to_csv }
@@ -59,6 +59,14 @@ class MembersController < ApplicationController
   def update
     @member = Member.find(params[:id])
 
+    params[:skillset].each do | id, evaluation |
+      skillEvaluation = SkillEvaluation.find(id)
+      if skillEvaluation
+        skillEvaluation.evaluation = evaluation
+        skillEvaluation.save()
+      end
+    end
+    
     respond_to do |format|
       if @member.update_attributes(params[:member])
         format.html { redirect_to @member, notice: 'Member was successfully updated.' }

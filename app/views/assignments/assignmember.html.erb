@@ -6,6 +6,9 @@
     <th>選択</th>
     <th>社員コード</th>
     <th>姓名</th>
+    <% @skillsets.each do | skillset | %>
+      <th><%= skillset.name %></th>
+    <% end %>
     <th></th>
     <th></th>
     <th></th>
@@ -15,7 +18,10 @@
     <tr>
     <td><%= check_box_tag 'members[]', member.id %></td>
     <td><%= member.code %></td>
-    <td><%= member.name %></td>    
+    <td><%= member.name %></td>
+    <% member.all_skillEvaluations.each do | eval | %>
+      <td><%= eval.evaluation %></td>
+    <% end %>    
     </tr>
   <% end %>
   </table>

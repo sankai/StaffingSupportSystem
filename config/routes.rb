@@ -1,5 +1,8 @@
 StaffingSystem::Application.routes.draw do
 
+  resources :skillsets
+
+
   devise_for :users
 
   root:to => 'menu#show'

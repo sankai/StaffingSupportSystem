@@ -23,6 +23,16 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
+  <br>
+  <table>
+    <% @member.all_skillEvaluations.each do | eval | %>
+    <tr>
+    <td><%= eval.skillset.name %></td>
+    <td><%= select_tag 'skillset[' + eval.id.to_s + ']', options_for_select(['　','○','△','×'], eval.evaluation) %></td>
+    </tr>
+    <% end %>
+  </table>
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

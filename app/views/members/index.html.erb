@@ -5,6 +5,9 @@
     <th>社員コード</th>
     <th>姓名</th>
     <th>Ｅメール</th>
+    <% @skillsets.each do | skillset | %>
+      <th><%= skillset.name %></th>
+    <% end %>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +18,9 @@
     <td><%= member.code %></td>
     <td><%= member.name %></td>
     <td><%= member.email %></td>
+    <% member.all_skillEvaluations.each do | eval | %>
+      <td><%= eval.evaluation %></td>
+    <% end %>
     <td><%= link_to '表示', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
     <td><%= link_to '削除', member, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>

@@ -89,6 +89,12 @@ class AssignmentsController < ApplicationController
   def assignmember
     @assignment = Assignment.find(params[:id])
     @members = Member.all()
+    
+    # アサイン済のメンバは排除する
+    @assignment.members.each do | member |
+      @members.delete(member)
+    end
+    @skillsets  = Skillset.all.sort_by{ |model| model.id }
     session[:currentAssignment] = @assignment
   
   end

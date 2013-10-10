@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @skillset.name %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @skillset.memo %>
+</p>
+
+<p>
+  <b>Field:</b>
+  <%= @skillset.field %>
+</p>
+
+
+<%= link_to 'Edit', edit_skillset_path(@skillset) %> |
+<%= link_to 'Back', skillsets_path %>

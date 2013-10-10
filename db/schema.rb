@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130919000244) do
+ActiveRecord::Schema.define(:version => 20131010145429) do
 
   create_table "ankens", :force => true do |t|
     t.string   "name"
@@ -61,16 +61,28 @@ ActiveRecord::Schema.define(:version => 20130919000244) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "skillset_langs", :force => true do |t|
-    t.string   "name"
-    t.string   "memo"
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "skillset_roles", :force => true do |t|
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "skill_evaluations", :force => true do |t|
+    t.string   "evaluation"
+    t.integer  "member_id"
+    t.integer  "skillset_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "skillsets", :force => true do |t|
     t.string   "name"
     t.string   "memo"
+    t.string   "field"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

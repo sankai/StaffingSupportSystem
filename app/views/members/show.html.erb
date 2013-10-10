@@ -15,6 +15,15 @@
   <%= @member.email %>
 </p>
 
+<table>
+  <% @member.all_skillEvaluations.each do | eval | %>
+    <tr>
+    <td><%= eval.skillset.name %></td>
+    <td><%= eval.evaluation %></td>
+    </tr>
+  <% end %>
+</table>
+
 <p>
 <%= link_to 'メンバの編集', edit_member_path(@member) %>
 </p>
@@ -34,7 +43,6 @@
 	    <th></th>
 	    <th></th>
 	  </tr>
-
 	  <% @member.assignments.each do |assignment| %>
 	  <tr>
 	    <td><%= assignment.from %></td>
