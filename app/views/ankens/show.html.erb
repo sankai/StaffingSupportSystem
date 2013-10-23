@@ -53,8 +53,8 @@
 
 <% @anken.assignments.each do |assignment| %>
   <tr>
-    <td><%= assignment.from %></td>
-    <td><%= assignment.to %></td>
+    <td><%= assignment.from_ymd %></td>
+    <td><%= assignment.to_ymd %></td>
     <td><%= assignment.roleComment %></td>
     <td><%= assignment.num_engineer %></td>
     <td><%= assignment.members.size %></td>    

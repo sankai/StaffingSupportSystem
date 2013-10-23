@@ -55,3 +55,5 @@ gem 'web-app-theme', :git => 'http://github.com/pilu/web-app-theme.git'
 # will pagenate
 gem 'will_paginate'
 
+# for passing some data from controller to javascript
+gem 'gon', '3.0.5'

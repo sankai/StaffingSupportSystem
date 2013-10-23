@@ -1,3 +1,4 @@
+# encording: UTF-8
 class AnkensController < ApplicationController
 
   # GET /ankens
@@ -52,7 +53,7 @@ class AnkensController < ApplicationController
     
     # ドロップリスト用
     @depts  = Dept.all()
-	    
+    	    
     respond_to do |format|
       format.html # index.html.erb
       format.csv  { send_data Anken.to_csv }

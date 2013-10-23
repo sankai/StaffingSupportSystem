@@ -1,3 +1,4 @@
+# encording: UTF-8
 class DeptsController < ApplicationController
   # GET /depts
   # GET /depts.json

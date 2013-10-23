@@ -16,6 +16,10 @@ class MembersController < ApplicationController
   def show
     @member = Member.find(params[:id])
 
+	  # data for google timeline chart
+	  gon.graph_data = @member.asTimelineRows()
+	  puts gon.graph_data
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @member }

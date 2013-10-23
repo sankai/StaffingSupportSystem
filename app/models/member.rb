@@ -53,4 +53,12 @@ class Member < ActiveRecord::Base
     return self.skill_evaluations.sort_by{ |model| model.skillset.id }   
   end
   
+  def asTimelineRows
+    anArray = Array.new()
+    self.assignments.each do | anAssignment |
+      anArray.push(anAssignment.asTimelineRow)
+    end
+    return anArray
+  end
+  
 end
