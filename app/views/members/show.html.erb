@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>社員コード:</b>
+  <b class="label">社員コード:</b>
   <%= @member.code %>
 </p>
 
@@ -45,13 +45,13 @@
 	  </tr>
 	  <% @member.assignments.each do |assignment| %>
 	  <tr>
-	    <td><%= assignment.from %></td>
-	    <td><%= assignment.to %></td>
+	    <td><%= assignment.from.to_s %></td>
+	    <td><%= assignment.to.to_s %></td>
 	    <td><%= assignment.anken.name %></td>
 	    <td><%= assignment.anken.customer %></td>
 	    <td><%= assignment.roleComment %></td>
 	    <td><%= assignment.status %></td>
-	    <td><%= link_to '表示', assignment %></td>
+	    <td><%= link_to '詳細', assignment %></td>
 	    <td><%= link_to '編集', edit_assignment_path(assignment) %></td>
 	    <td><%= link_to 'リリース', '/assignments/release/' + assignment.id.to_s + '/' + @member.id.to_s, data: { confirm: 'リリースしてよろしいですか？' } %></td>
 	  </tr>

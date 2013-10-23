@@ -21,7 +21,7 @@
     <% member.all_skillEvaluations.each do | eval | %>
       <td><%= eval.evaluation %></td>
     <% end %>
-    <td><%= link_to '表示', member %></td>
+    <td><%= link_to '詳細', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
     <td><%= link_to '削除', member, method: :delete, data: { confirm: '削除してよろしいですか？' } %></td>
   </tr>
