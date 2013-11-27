@@ -1,11 +1,72 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+member1:
+  id: 1
+  code: p9572843
+  name: 山海　一剛
+  email: Sankai_Kazutaka@ogis-ri.co.jp
+  created_at: 2013-09-18 10:01:15.765521
+  updated_at: 2013-09-18 10:01:15.765521
 
-one:
-  code: MyString
-  name: MyString
-  email: MyString
+member2:
+  id: 2
+  code: P1163427
+  name: 蓮池　耕平
+  email: hasike_kouhei@ogis-ri.co.jp
+  created_at: 2013-09-18 10:04:42.475344
+  updated_at: 2013-11-27 15:03:20.544477
 
-two:
-  code: MyString
-  name: MyString
-  email: MyString
+member3:
+  id: 3
+  code: P1066666
+  name: 秋元　梨一
+  email: akimoto_nashiichi@ogis-ri.co.jp
+  created_at: 2013-09-18 10:04:42.475344
+  updated_at: 2013-09-18 10:04:42.475344
+
+member4:
+  id: 4
+  code: P1077778
+  name: 夏八木　西瓜
+  email: natsuyagi_suika@ogis-ri.co.jp
+  created_at: 2013-09-18 10:04:42.475344
+  updated_at: 2013-09-18 10:04:42.475344
+
+member5:
+  id: 5
+  code: P1077777
+  name: 春本　蕗
+  email: harumoto_fuki@ogis-ri.co.jp
+  created_at: 2013-09-18 10:04:42.475344
+  updated_at: 2013-09-18 10:04:42.475344
+
+member6:
+  id: 6
+  code: P1077744
+  name: 春田　霞
+  email: haruta_kasumi@ogis-ri.co.jp
+  created_at: 2013-09-20 14:14:53.028441
+  updated_at: 2013-09-20 14:14:53.028441
+
+member7:
+  id: 7
+  code: P1077755
+  name: 夏田　露
+  email: natsuda_tsuyu@ogis-ri.co.jp
+  created_at: 2013-09-20 14:14:53.056443
+  updated_at: 2013-09-20 14:14:53.056443
+
+member8:
+  id: 8
+  code: P1077766
+  name: 秋田　霜
+  email: akita_shimo@ogis-ri.co.jp
+  created_at: 2013-09-20 14:14:53.065443
+  updated_at: 2013-09-20 14:14:53.065443
+
+member9:
+  id: 9
+  code: P1077788
+  name: 冬田　雪
+  email: fuyuta_yuki@ogis-ri.co.jp
+  created_at: 2013-09-20 14:14:53.075444
+  updated_at: 2013-09-20 14:14:53.075444
+

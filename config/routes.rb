@@ -5,7 +5,7 @@ StaffingSystem::Application.routes.draw do
 
   devise_for :users
 
-  root:to => 'menu#show'
+  root :to => 'menu#show'
   
   match 'assignments/new/:id' => 'assignments#new'
 
@@ -18,6 +18,8 @@ StaffingSystem::Application.routes.draw do
   match 'ankens/upload' => 'ankens#upload'
 
   match 'ankens/index' => 'ankens#index'
+
+  match 'ankens/index/:page' => 'ankens#index'
 
   match 'members/upload' => 'members#upload'
 

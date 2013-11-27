@@ -1,13 +1,143 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+anken1:
+  id: 1
+  name: 会計管理パッケージ再構築
+  customer: 株式会社縄文
+  estimatePrice: 3000
+  memo: メモ
+  created_at: 2013-09-18 06:49:04.587995
+  updated_at: 2013-11-27 15:00:33.336913
+  ankenstatus_id: 1
+  dept_id: 1
 
-one:
-  name: MyString
-  customer: MyString
-  estimatePrice: 1
-  memo: MyString
+anken2:
+  id: 2
+  name: 新設部品リスト構築
+  customer: 月野自動車様
+  estimatePrice: 2000
+  memo: 近々提案予定
+  created_at: 2013-09-18 07:30:56.859167
+  updated_at: 2013-11-27 15:00:57.293283
+  ankenstatus_id: 1
+  dept_id: 1
 
-two:
-  name: MyString
-  customer: MyString
-  estimatePrice: 1
-  memo: MyString
+anken3:
+  id: 3
+  name: 与信管理システム機能追加
+  customer: 豊橋共済銀行
+  estimatePrice: 5000
+  memo: 緊急
+  created_at: 2013-09-18 10:43:18.890271
+  updated_at: 2013-09-23 11:05:02.691746
+  ankenstatus_id: 2
+  dept_id: 3
+
+anken4:
+  id: 4
+  name: 物流管理システム構築支援
+  customer: 株式会社日本流通
+  estimatePrice: 10500
+  memo: お客様の要求レベル高い！
+  created_at: 2013-09-21 15:07:24.757068
+  updated_at: 2013-09-21 15:07:24.757068
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken5:
+  id: 5
+  name: 顧客情報管理システム
+  customer: ヤマーダエネルギー
+  estimatePrice: 55000
+  memo: 提案中
+  created_at: 2013-09-21 15:07:24.780070
+  updated_at: 2013-09-21 15:07:24.780070
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken6:
+  id: 6
+  name: 営業支援システム
+  customer: 愛知陸運
+  estimatePrice: 12000
+  memo: sales force殿紹介
+  created_at: 2013-09-21 15:07:24.789070
+  updated_at: 2013-09-21 15:07:24.789070
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken7:
+  id: 7
+  name: 危機管理システムのクラウド化
+  customer: 連合警備保証
+  estimatePrice: 22000
+  memo: PS事業本部と連携
+  created_at: 2013-09-21 15:07:24.798071
+  updated_at: 2013-09-21 15:07:24.798071
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken8:
+  id: 8
+  name: 求償システム環境構築
+  customer: 日本エレクトロテクノ
+  estimatePrice: 35000
+  memo: 運用管理システムの構築支援
+  created_at: 2013-09-21 15:07:24.807071
+  updated_at: 2013-09-21 15:07:24.807071
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken9:
+  id: 9
+  name: ITガバナンスコンサル
+  customer: 十八銀行
+  estimatePrice: 11000
+  memo: 業務見える化
+  created_at: 2013-09-21 15:07:24.817072
+  updated_at: 2013-09-21 15:07:24.817072
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken10:
+  id: 10
+  name: 輸入管理システム
+  customer: くらま楽器
+  estimatePrice: 43000
+  memo: BOM様ご紹介
+  created_at: 2013-09-21 15:07:24.827072
+  updated_at: 2013-09-27 07:26:12.992900
+  ankenstatus_id: 1
+  dept_id: 11
+
+anken11:
+  id: 11
+  name: 部品受発注システム
+  customer: 大阪冷機
+  estimatePrice: 434000
+  memo: Forte案件
+  created_at: 2013-09-21 15:07:24.836073
+  updated_at: 2013-09-21 15:07:24.836073
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken12:
+  id: 12
+  name: コストフローシート改善
+  customer: 目野自動車
+  estimatePrice: 2000
+  memo: 再提案予定
+  created_at: 2013-09-21 15:07:24.849074
+  updated_at: 2013-09-21 15:07:24.849074
+  ankenstatus_id: 1
+  dept_id: 1
+
+anken13:
+  id: 13
+  name: 豊田市共済銀行
+  customer: 債権管理システム機能追加
+  estimatePrice: 44000
+  memo: 要員追加要請
+  created_at: 2013-09-21 15:07:24.858074
+  updated_at: 2013-09-21 15:07:24.858074
+  ankenstatus_id: 1
+  dept_id: 1
+

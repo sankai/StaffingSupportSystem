@@ -1,9 +1,91 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+dept1:
+  id: 1
+  code: ES1
+  name: ES1部
+  created_at: 2013-09-18 06:37:07.764373
+  updated_at: 2013-09-18 06:37:07.764373
 
-one:
-  code: MyString
-  name: MyString
+dept2:
+  id: 2
+  code: ES2
+  name: ES2部
+  created_at: 2013-09-18 06:37:24.425373
+  updated_at: 2013-09-18 06:37:24.425373
 
-two:
-  code: MyString
-  name: MyString
+dept3:
+  id: 3
+  code: ES3
+  name: ES3部
+  created_at: 2013-09-18 06:37:37.367373
+  updated_at: 2013-09-18 06:37:37.367373
+
+dept4:
+  id: 4
+  code: BS1
+  name: BS1部
+  created_at: 2013-09-21 13:47:16.488051
+  updated_at: 2013-09-21 13:47:16.488051
+
+dept5:
+  id: 5
+  code: BS2
+  name: BS2部
+  created_at: 2013-09-21 13:47:16.499052
+  updated_at: 2013-09-21 13:47:16.499052
+
+dept6:
+  id: 6
+  code: BS3
+  name: BS3部
+  created_at: 2013-09-21 13:47:16.508052
+  updated_at: 2013-09-21 13:47:16.508052
+
+dept7:
+  id: 7
+  code: EM1
+  name: 組込み1部
+  created_at: 2013-09-21 13:51:26.927375
+  updated_at: 2013-09-21 13:51:26.927375
+
+dept8:
+  id: 8
+  code: EM2
+  name: 組込み2部
+  created_at: 2013-09-21 13:51:26.939376
+  updated_at: 2013-09-21 13:51:26.939376
+
+dept9:
+  id: 9
+  code: EM3
+  name: 組込み3部
+  created_at: 2013-09-21 13:51:26.949377
+  updated_at: 2013-09-21 13:51:26.949377
+
+dept10:
+  id: 10
+  code: EM4
+  name: 組込み4部
+  created_at: 2013-09-21 13:51:26.961377
+  updated_at: 2013-09-21 13:51:26.961377
+
+dept11:
+  id: 11
+  code: EN1
+  name: エネ1部
+  created_at: 2013-09-21 13:51:26.972378
+  updated_at: 2013-09-21 13:51:26.972378
+
+dept12:
+  id: 12
+  code: EN2
+  name: エネ2部
+  created_at: 2013-09-21 13:51:26.982378
+  updated_at: 2013-09-21 13:51:26.982378
+
+dept13:
+  id: 13
+  code: EN3
+  name: エネ3部
+  created_at: 2013-09-21 13:51:26.993379
+  updated_at: 2013-09-21 13:51:26.993379
+

@@ -1,11 +1,576 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+skill_evaluation1:
+  id: 1
+  evaluation: △
+  member_id: 3
+  skillset_id: 1
+  created_at: 2013-10-10 11:24:43.173778
+  updated_at: 2013-10-10 11:44:58.416354
 
-one:
-  evaluation: MyString
+skill_evaluation2:
+  id: 2
+  evaluation: ○
+  member_id: 3
+  skillset_id: 2
+  created_at: 2013-10-10 11:24:43.188779
+  updated_at: 2013-10-10 11:44:58.427354
+
+skill_evaluation3:
+  id: 3
+  evaluation: △
+  member_id: 3
+  skillset_id: 3
+  created_at: 2013-10-10 11:24:43.201779
+  updated_at: 2013-10-10 11:44:58.437355
+
+skill_evaluation4:
+  id: 4
+  evaluation: ○
+  member_id: 3
+  skillset_id: 4
+  created_at: 2013-10-10 11:24:43.213780
+  updated_at: 2013-10-10 11:44:58.448356
+
+skill_evaluation5:
+  id: 5
+  evaluation: ○
+  member_id: 3
+  skillset_id: 5
+  created_at: 2013-10-10 11:24:43.226781
+  updated_at: 2013-10-10 15:07:37.969355
+
+skill_evaluation6:
+  id: 6
+  evaluation: ×
+  member_id: 3
+  skillset_id: 6
+  created_at: 2013-10-10 11:24:43.234781
+  updated_at: 2013-10-10 15:07:37.979356
+
+skill_evaluation7:
+  id: 7
+  evaluation: ×
+  member_id: 3
+  skillset_id: 7
+  created_at: 2013-10-10 11:24:43.243782
+  updated_at: 2013-10-10 11:48:25.986226
+
+skill_evaluation8:
+  id: 8
+  evaluation: ○
+  member_id: 3
+  skillset_id: 8
+  created_at: 2013-10-10 11:24:43.269783
+  updated_at: 2013-10-10 15:07:38.009357
+
+skill_evaluation9:
+  id: 9
+  evaluation: ×
+  member_id: 6
+  skillset_id: 1
+  created_at: 2013-10-10 11:49:46.934856
+  updated_at: 2013-10-10 11:50:15.363482
+
+skill_evaluation10:
+  id: 10
+  evaluation: ×
+  member_id: 6
+  skillset_id: 2
+  created_at: 2013-10-10 11:49:46.951857
+  updated_at: 2013-10-10 11:50:15.377483
+
+skill_evaluation11:
+  id: 11
+  evaluation: ×
+  member_id: 6
+  skillset_id: 3
+  created_at: 2013-10-10 11:49:46.966858
+  updated_at: 2013-10-10 11:50:15.391484
+
+skill_evaluation12:
+  id: 12
+  evaluation: ○
+  member_id: 6
+  skillset_id: 4
+  created_at: 2013-10-10 11:49:46.978859
+  updated_at: 2013-10-10 11:50:15.406484
+
+skill_evaluation13:
+  id: 13
+  evaluation: ×
+  member_id: 6
+  skillset_id: 5
+  created_at: 2013-10-10 11:49:46.987859
+  updated_at: 2013-10-10 11:50:15.418485
+
+skill_evaluation14:
+  id: 14
+  evaluation: △
+  member_id: 6
+  skillset_id: 6
+  created_at: 2013-10-10 11:49:46.996860
+  updated_at: 2013-10-10 11:50:15.428486
+
+skill_evaluation15:
+  id: 15
+  evaluation: ○
+  member_id: 6
+  skillset_id: 7
+  created_at: 2013-10-10 11:49:47.006860
+  updated_at: 2013-10-10 15:08:10.357208
+
+skill_evaluation16:
+  id: 16
+  evaluation: ×
+  member_id: 6
+  skillset_id: 8
+  created_at: 2013-10-10 11:49:47.013861
+  updated_at: 2013-10-10 11:50:15.446487
+
+skill_evaluation17:
+  id: 17
+  evaluation: ○
+  member_id: 7
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:53.699444
+  updated_at: 2013-10-10 15:08:47.361324
+
+skill_evaluation18:
+  id: 18
+  evaluation: ×
+  member_id: 7
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:53.709445
+  updated_at: 2013-10-10 15:08:47.371325
+
+skill_evaluation19:
+  id: 19
+  evaluation: ×
+  member_id: 7
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:53.717445
+  updated_at: 2013-10-10 15:08:47.379325
+
+skill_evaluation20:
+  id: 20
+  evaluation: ×
+  member_id: 7
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:53.724445
+  updated_at: 2013-10-10 15:08:47.390326
+
+skill_evaluation21:
+  id: 21
+  evaluation: ×
+  member_id: 7
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:53.732446
+  updated_at: 2013-10-10 15:08:47.400326
+
+skill_evaluation22:
+  id: 22
+  evaluation: △
+  member_id: 7
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:53.739446
+  updated_at: 2013-10-10 15:08:47.409327
+
+skill_evaluation23:
+  id: 23
+  evaluation: ×
+  member_id: 7
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:53.747447
+  updated_at: 2013-10-10 15:08:47.419327
+
+skill_evaluation24:
+  id: 24
+  evaluation: ×
+  member_id: 7
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:53.753447
+  updated_at: 2013-10-10 15:08:47.429328
+
+skill_evaluation25:
+  id: 25
+  evaluation: △
+  member_id: 8
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:53.764448
+  updated_at: 2013-10-10 15:09:17.209031
+
+skill_evaluation26:
+  id: 26
+  evaluation: △
+  member_id: 8
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:53.772448
+  updated_at: 2013-10-10 15:09:17.219032
+
+skill_evaluation27:
+  id: 27
+  evaluation: ○
+  member_id: 8
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:53.798450
+  updated_at: 2013-10-10 15:09:17.229032
+
+skill_evaluation28:
+  id: 28
+  evaluation: ×
+  member_id: 8
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:53.806450
+  updated_at: 2013-10-10 15:09:17.238033
+
+skill_evaluation29:
+  id: 29
+  evaluation: ×
+  member_id: 8
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:53.813451
+  updated_at: 2013-10-10 15:09:17.251034
+
+skill_evaluation30:
+  id: 30
+  evaluation: ×
+  member_id: 8
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:53.821451
+  updated_at: 2013-10-10 15:09:17.261034
+
+skill_evaluation31:
+  id: 31
+  evaluation: ×
+  member_id: 8
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:53.827451
+  updated_at: 2013-10-10 15:09:17.271035
+
+skill_evaluation32:
+  id: 32
+  evaluation: ×
+  member_id: 8
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:53.835452
+  updated_at: 2013-10-10 15:09:17.280035
+
+skill_evaluation33:
+  id: 33
+  evaluation: ×
+  member_id: 5
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:53.847452
+  updated_at: 2013-10-23 17:45:16.001438
+
+skill_evaluation34:
+  id: 34
+  evaluation: △
+  member_id: 5
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:53.854453
+  updated_at: 2013-10-23 17:45:16.010439
+
+skill_evaluation35:
+  id: 35
+  evaluation: ×
+  member_id: 5
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:53.861453
+  updated_at: 2013-10-23 17:45:16.018439
+
+skill_evaluation36:
+  id: 36
+  evaluation: ○
+  member_id: 5
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:53.870454
+  updated_at: 2013-10-23 17:45:16.026440
+
+skill_evaluation37:
+  id: 37
+  evaluation: △
+  member_id: 5
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:53.878454
+  updated_at: 2013-10-23 17:45:16.034440
+
+skill_evaluation38:
+  id: 38
+  evaluation: △
+  member_id: 5
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:53.885455
+  updated_at: 2013-10-23 17:45:16.042441
+
+skill_evaluation39:
+  id: 39
+  evaluation: ×
+  member_id: 5
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:53.893455
+  updated_at: 2013-10-23 17:45:16.050441
+
+skill_evaluation40:
+  id: 40
+  evaluation: ○
+  member_id: 5
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:53.901456
+  updated_at: 2013-10-23 17:45:16.059442
+
+skill_evaluation41:
+  id: 41
+  evaluation: ×
+  member_id: 4
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:53.912456
+  updated_at: 2013-10-23 17:46:35.778001
+
+skill_evaluation42:
+  id: 42
+  evaluation: ×
+  member_id: 4
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:53.919457
+  updated_at: 2013-10-23 17:46:35.786002
+
+skill_evaluation43:
+  id: 43
+  evaluation: ×
+  member_id: 4
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:53.926457
+  updated_at: 2013-10-23 17:46:35.795002
+
+skill_evaluation44:
+  id: 44
+  evaluation: ○
+  member_id: 4
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:53.934457
+  updated_at: 2013-10-23 17:46:35.803003
+
+skill_evaluation45:
+  id: 45
+  evaluation: △
+  member_id: 4
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:53.941458
+  updated_at: 2013-10-23 17:46:35.812003
+
+skill_evaluation46:
+  id: 46
+  evaluation: △
+  member_id: 4
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:53.949458
+  updated_at: 2013-10-23 17:46:35.820004
+
+skill_evaluation47:
+  id: 47
+  evaluation: ×
+  member_id: 4
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:53.957459
+  updated_at: 2013-10-23 17:46:35.829004
+
+skill_evaluation48:
+  id: 48
+  evaluation: ×
+  member_id: 4
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:53.986460
+  updated_at: 2013-10-23 17:46:35.838005
+
+skill_evaluation49:
+  id: 49
+  evaluation: ×
+  member_id: 9
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:54.040463
+  updated_at: 2013-10-23 17:47:24.831807
+
+skill_evaluation50:
+  id: 50
+  evaluation: △
+  member_id: 9
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:54.066465
+  updated_at: 2013-10-23 17:47:24.840807
+
+skill_evaluation51:
+  id: 51
+  evaluation: △
+  member_id: 9
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:54.086466
+  updated_at: 2013-10-23 17:47:24.849808
+
+skill_evaluation52:
+  id: 52
+  evaluation: ○
+  member_id: 9
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:54.108467
+  updated_at: 2013-10-23 17:47:24.859809
+
+skill_evaluation53:
+  id: 53
+  evaluation: ○
+  member_id: 9
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:54.124468
+  updated_at: 2013-10-23 17:47:24.869809
+
+skill_evaluation54:
+  id: 54
+  evaluation: ×
+  member_id: 9
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:54.141469
+  updated_at: 2013-10-23 17:47:24.879810
+
+skill_evaluation55:
+  id: 55
+  evaluation: ○
+  member_id: 9
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:54.156470
+  updated_at: 2013-10-23 17:47:24.888810
+
+skill_evaluation56:
+  id: 56
+  evaluation: ×
+  member_id: 9
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:54.185472
+  updated_at: 2013-10-23 17:47:24.898811
+
+skill_evaluation57:
+  id: 57
+  evaluation: △
+  member_id: 2
+  skillset_id: 1
+  created_at: 2013-10-10 14:02:54.207473
+  updated_at: 2013-10-23 17:48:01.658913
+
+skill_evaluation58:
+  id: 58
+  evaluation: ○
+  member_id: 2
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:54.230474
+  updated_at: 2013-10-23 17:48:01.666914
+
+skill_evaluation59:
+  id: 59
+  evaluation: △
+  member_id: 2
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:54.273477
+  updated_at: 2013-10-23 17:48:01.673914
+
+skill_evaluation60:
+  id: 60
+  evaluation: ○
+  member_id: 2
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:54.305479
+  updated_at: 2013-10-23 17:48:01.681915
+
+skill_evaluation61:
+  id: 61
+  evaluation: ○
+  member_id: 2
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:54.314479
+  updated_at: 2013-10-23 17:48:01.690915
+
+skill_evaluation62:
+  id: 62
+  evaluation: ×
+  member_id: 2
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:54.324480
+  updated_at: 2013-10-23 17:48:01.717917
+
+skill_evaluation63:
+  id: 63
+  evaluation: ×
+  member_id: 2
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:54.333480
+  updated_at: 2013-10-23 17:48:01.727917
+
+skill_evaluation64:
+  id: 64
+  evaluation: ×
+  member_id: 2
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:54.341481
+  updated_at: 2013-10-23 17:48:01.735918
+
+skill_evaluation65:
+  id: 65
+  evaluation: ○
   member_id: 1
   skillset_id: 1
+  created_at: 2013-10-10 14:02:54.355482
+  updated_at: 2013-10-23 17:46:02.306087
 
-two:
-  evaluation: MyString
+skill_evaluation66:
+  id: 66
+  evaluation: ○
   member_id: 1
-  skillset_id: 1
+  skillset_id: 2
+  created_at: 2013-10-10 14:02:54.363482
+  updated_at: 2013-10-23 17:46:02.315087
+
+skill_evaluation67:
+  id: 67
+  evaluation: ○
+  member_id: 1
+  skillset_id: 3
+  created_at: 2013-10-10 14:02:54.371482
+  updated_at: 2013-10-23 17:46:02.325088
+
+skill_evaluation68:
+  id: 68
+  evaluation: △
+  member_id: 1
+  skillset_id: 4
+  created_at: 2013-10-10 14:02:54.379483
+  updated_at: 2013-10-23 17:46:02.334088
+
+skill_evaluation69:
+  id: 69
+  evaluation: △
+  member_id: 1
+  skillset_id: 5
+  created_at: 2013-10-10 14:02:54.387483
+  updated_at: 2013-10-23 17:46:02.344089
+
+skill_evaluation70:
+  id: 70
+  evaluation: ×
+  member_id: 1
+  skillset_id: 6
+  created_at: 2013-10-10 14:02:54.394484
+  updated_at: 2013-10-23 17:46:02.354089
+
+skill_evaluation71:
+  id: 71
+  evaluation: ×
+  member_id: 1
+  skillset_id: 7
+  created_at: 2013-10-10 14:02:54.403484
+  updated_at: 2013-10-23 17:46:02.365090
+
+skill_evaluation72:
+  id: 72
+  evaluation: ○
+  member_id: 1
+  skillset_id: 8
+  created_at: 2013-10-10 14:02:54.410485
+  updated_at: 2013-10-23 17:46:02.377091
+
