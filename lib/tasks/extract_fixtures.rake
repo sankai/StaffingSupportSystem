@@ -13,7 +13,8 @@ namespace :db do
   namespace :fixtures do
     desc "Extract database data to the test/fixtures/ directory. Use FIXTURES=table_name[,table_name...] to specify table names to extract. Otherwise, all the table data will be extracted."
     task :extract => :environment do
-      sql = "SELECT * FROM %s ORDER BY id"
+      #sql = "SELECT * FROM %s ORDER BY id"
+      sql = "SELECT * FROM %s"
       skip_tables = ["schema_info"]
       ActiveRecord::Base.establish_connection
       FileUtils.mkdir_p(fixtures_dir)
