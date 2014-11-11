@@ -41,3 +41,7 @@
   <%= submit_tag "アップロード", :confirm => "アップロードしていいですか？" %>
 <% end %>
 <br />
+
+<table id="members_list"></table>
+<div id="members_pager"></div>
+<%= raw(members_jqgrid) %>

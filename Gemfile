@@ -59,3 +59,6 @@ gem 'will_paginate'
 gem 'gon', '3.0.5'
 
 gem 'kinukake', '0.0.1', :git => 'git://github.com/sankai/kinukake.git'
+
+gem 'jqgrid_for_rails'
+

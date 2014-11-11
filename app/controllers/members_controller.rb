@@ -18,13 +18,29 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   
-  def index_by_shell
+  def index_by_shell    
     
     respond_to do |format|
       format.html # index.html.erb
       format.csv { send_data Member.to_csv }
-      format.json { send_data run('EXTRACT_MEMBERS.sh', 'JSON') }
+      format.json {  render :text =>  run('EXTRACT_MEMBERS.sh', 'JSON') }
+    end  
+  
+  end
+  
+  def index_on_grid
+
+    @columns = ['code', 'name', 'email']
+
+    @members = Member.paginate(
+      :page     => params[:page],
+      :per_page => params[:rows],
+      :order    => order_by_from_params(params))
+
+    if request.xhr?
+      render :json => json_for_jqgrid(@members, @columns)
     end
+
   end
   
   # GET /members/1

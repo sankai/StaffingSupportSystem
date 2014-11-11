@@ -23,9 +23,11 @@ StaffingSystem::Application.routes.draw do
 
   match 'members/upload' => 'members#upload'
   
+  match 'depts/upload' => 'depts#upload'
+
   match 'members_by_shell' => 'members#index_by_shell'    
 
-  match 'depts/upload' => 'depts#upload'
+  match 'members_on_grid' => 'members#index_on_grid'    
 
   resources :skillset_roles
 
