@@ -1,0 +1,17 @@
+<h1>メンバ一覧</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>社員コード</th>
+      <th>姓名</th>
+      <th>Ｅメール</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= raw(run('EXTRACT_MEMBERS.sh', 'HTML')) %>
+  </tbody>
+  
+</table>
+<br />

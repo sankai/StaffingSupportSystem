@@ -1,6 +1,10 @@
 class MembersController < ApplicationController
+
+  include Kinukake
+  
   # GET /members
   # GET /members.json
+  
   def index
     @members = Member.paginate(:page => params[:page], :order => 'code', :per_page => 10)
     @skillsets = Skillset.all.sort_by{ |model| model.id }  
@@ -11,6 +15,18 @@ class MembersController < ApplicationController
     end
   end
 
+  # GET /members
+  # GET /members.json
+  
+  def index_by_shell
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.csv { send_data Member.to_csv }
+      format.json { send_data run('EXTRACT_MEMBERS.sh', 'JSON') }
+    end
+  end
+  
   # GET /members/1
   # GET /members/1.json
   def show

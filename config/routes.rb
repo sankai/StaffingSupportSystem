@@ -22,6 +22,8 @@ StaffingSystem::Application.routes.draw do
   match 'ankens/index/:page' => 'ankens#index'
 
   match 'members/upload' => 'members#upload'
+  
+  match 'members_by_shell' => 'members#index_by_shell'    
 
   match 'depts/upload' => 'depts#upload'
 
