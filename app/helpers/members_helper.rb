@@ -7,7 +7,7 @@ module MembersHelper
   def members_jqgrid
 
     grid = [{
-      :url => '/members_on_grid',
+      :url => '/members_by_shell',
       :datatype => 'json',
       :mtype => 'GET',
       :colNames => ['code','name','email'],
