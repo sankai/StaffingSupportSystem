@@ -37,10 +37,11 @@ class MembersController < ApplicationController
       :per_page => params[:rows],
       :order    => order_by_from_params(params))
 
-    if request.xhr?
-      render :json => json_for_jqgrid(@members, @columns)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json {  render :json => json_for_jqgrid(@members, @columns) }
     end
-
+    
   end
   
   # GET /members/1
@@ -50,7 +51,7 @@ class MembersController < ApplicationController
 
 	  # data for google timeline chart
 	  gon.graph_data = @member.asTimelineRows()
-	  puts gon.graph_data
+	  #puts gon.graph_data
 
     respond_to do |format|
       format.html # show.html.erb
