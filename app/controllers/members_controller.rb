@@ -19,11 +19,10 @@ class MembersController < ApplicationController
   # GET /members.json
   
   def index_by_shell    
-    
     respond_to do |format|
       format.html # index.html.erb
       format.csv { send_data Member.to_csv }
-      format.json {  render :text =>  run('EXTRACT_MEMBERS.sh', 'JSON') }
+      format.json {  render :text =>  run2('EXTRACT_MEMBERS.sh', 'JSON', params[:rows], params[:page]) }
     end  
   
   end
@@ -39,7 +38,10 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json {  render :json => json_for_jqgrid(@members, @columns) }
+      format.json {
+        puts json_for_jqgrid(@members, @columns) 
+        render :json => json_for_jqgrid(@members, @columns) 
+        }
     end
     
   end

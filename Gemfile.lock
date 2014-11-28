@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/sankai/kinukake.git
-  revision: c1d905a5ceb9bd78c685c7925b74a74e413cb251
+  revision: 69bdaf1176500c5d2d1b71847e7ecc7a35ffea48
   specs:
-    kinukake (0.0.1)
+    kinukake (0.0.3)
 
 GIT
   remote: http://github.com/pilu/web-app-theme.git
@@ -110,7 +110,7 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
-    sass (3.4.7)
+    sass (3.4.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -148,7 +148,7 @@ DEPENDENCIES
   gon (= 3.0.5)
   jqgrid_for_rails
   jquery-rails
-  kinukake (= 0.0.1)!
+  kinukake!
   mysql2 (= 0.3.11)
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)

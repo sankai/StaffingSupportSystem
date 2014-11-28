@@ -58,7 +58,7 @@ gem 'will_paginate'
 # for passing some data from controller to javascript
 gem 'gon', '3.0.5'
 
-gem 'kinukake', '0.0.1', :git => 'git://github.com/sankai/kinukake.git'
+gem 'kinukake', :git => 'git://github.com/sankai/kinukake.git'
 
 gem 'jqgrid_for_rails'
 

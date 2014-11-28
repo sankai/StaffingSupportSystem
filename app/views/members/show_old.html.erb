@@ -1,0 +1,106 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b class="label">社員コード:</b>
+  <%= @member.code %>
+</p>
+
+<p>
+  <b>姓名:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Ｅメール:</b>
+  <%= @member.email %>
+</p>
+
+<table>
+  <% @member.all_skillEvaluations.each do | eval | %>
+    <tr>
+    <td><%= eval.skillset.name %></td>
+    <td><%= eval.evaluation %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+<%= link_to 'メンバの編集', edit_member_path(@member) %>
+</p>
+
+<br/>
+<p>
+  <b><%= @member.name %>さんのアサイン状況</b>
+	<table class="table">
+	  <tr>
+	    <th>From</th>
+	    <th>To</th>
+	    <th>案件名</th>    
+	    <th>お客様</th>    
+	    <th>役割</th>
+	    <th>案件スタータス</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+	  <% @member.assignments.each do |assignment| %>
+	  <tr>
+	    <td><%= assignment.from_ymd %></td>
+	    <td><%= assignment.to_ymd %></td>
+	    <td><%= assignment.anken.name %></td>
+	    <td><%= assignment.anken.customer %></td>
+	    <td><%= assignment.roleComment %></td>
+	    <td><%= assignment.status %></td>
+	    <td><%= link_to '詳細', assignment %></td>
+	    <td><%= link_to '編集', edit_assignment_path(assignment) %></td>
+	    <td><%= link_to 'リリース', '/assignments/release/' + assignment.id.to_s + '/' + @member.id.to_s, data: { confirm: 'リリースしてよろしいですか？' } %></td>
+	  </tr>
+	  <% end %>
+	</table>
+</p>
+<br />
+<div id="chart_div"></div>
+<br />
+
+<!------------------------------------------------------------------------>
+<!-- AJAX API のロード -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+// Visualization API と折れ線グラフ用のパッケージのロード
+google.load("visualization", "1", {packages:["timeline"]});
+
+// Google Visualization API ロード時のコールバック関数の設定
+google.setOnLoadCallback(drawChart);
+
+// グラフ作成用のコールバック関数
+function drawChart() {
+
+	// データテーブルの作成
+	var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'anken' });
+    dataTable.addColumn({ type: 'string', id: 'role' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    
+    for (var row in gon.graph_data){
+ 	      dataTable.addRow([ gon.graph_data[row][0], gon.graph_data[row][1], new Date(gon.graph_data[row][2], gon.graph_data[row][3], gon.graph_data[row][4]),  new Date(gon.graph_data[row][5], gon.graph_data[row][6], gon.graph_data[row][7]) ])
+      }
+    
+    //dataTable.addRows(gon.graph_data)
+
+	// グラフのオプションを設定
+	var options = { title: '会社業績' };
+    
+	// LineChart のオブジェクトの作成
+	var chart = new google.visualization.Timeline(document.getElementById('chart_div'));
+
+	// データテーブルとオプションを渡して、グラフを描画
+	chart.draw(dataTable, options);
+
+}
+</script>
+
+
+<%= link_to 'メンバ一覧', members_path %>

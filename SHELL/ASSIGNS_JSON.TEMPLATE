@@ -1,0 +1,34 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// Visualization API とグラフ用のパッケージのロード
+google.load("visualization", "1", {packages:["timeline"]});
+
+// Google Visualization API ロード時のコールバック関数の設定
+google.setOnLoadCallback(drawChart);
+
+// グラフ作成用のコールバック関数
+function drawChart() {
+  // データテーブルの作成
+  var dataTable = new google.visualization.DataTable();
+
+  dataTable.addColumn({ type: 'string', id: 'anken' });
+  dataTable.addColumn({ type: 'string', id: 'role' });
+  dataTable.addColumn({ type: 'date', id: 'Start' });
+  dataTable.addColumn({ type: 'date', id: 'End' });
+
+  dataTable.addRows([
+RECORDS
+    [ '%1', '%2:%3', new Date(%4, %5, %6), new Date(%7, %8, %9)]%10
+RECORDS
+    ])
+  // グラフのオプションを設定
+  var options = { title: 'アサイン状況' };
+    
+  // LineChart のオブジェクトの作成
+  var chart = new google.visualization.Timeline(document.getElementById('chart_div'));
+
+  // データテーブルとオプションを渡して、グラフを描画
+  chart.draw(dataTable, options);
+  }
+  
+</script>
